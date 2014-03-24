@@ -44,19 +44,6 @@ func main() {
 
 	module := os.Args[1]
 
-	// var visit = func(p string, f os.FileInfo, e error) error {
-	// 	if f.IsDir() && p != S.Path {
-	// 		_, file := filepath.Split(p)
-	// 		if !inList(file, blacklist) {
-	// 			S.Sites = append(S.Sites, file)
-	// 		}
-	// 	}
-	// 	return nil
-	// }
-	// if e := filepath.Walk(S.Path, visit); e != nil {
-	// 	log.Fatal(e)
-	// }
-
 	// Get all file paths in the current working directory.
 	files, e := filepath.Glob(fmt.Sprintf("%s/*", S.Path))
 	if e != nil {
